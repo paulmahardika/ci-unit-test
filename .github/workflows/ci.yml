@@ -20,5 +20,5 @@ jobs:
         with:
           github-token: ${{ secrets.SECRET_TOKEN }}
           test-script: npm run test:coverage
-          threshold: 60
+          threshold: 80
           output: comment, report-markdown
