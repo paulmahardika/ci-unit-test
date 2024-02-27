@@ -18,7 +18,7 @@ jobs:
       - name: Generate Report
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
+          github-token: ${{ secrets.SECRET_TOKEN }}
           test-script: npm run test:coverage
           threshold: 80
-          coverage-file: coverage/coverage-final.json
           output: comment, report-markdown
