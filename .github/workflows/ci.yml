@@ -12,3 +12,4 @@ jobs:
         with:
             test-script: npm test:coverage
             threshold: 80
+            coverage-file: coverage/coverage-final.json
