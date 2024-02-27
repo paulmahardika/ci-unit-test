@@ -7,10 +7,18 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: ArtiomTr/jest-coverage-report-action@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-            test-script: npm run test:coverage
-            threshold: 80
-            coverage-file: coverage/coverage-final.json
-            output: comment, report-markdown
+          node-version: '18.x'
+
+      - name: Generate Report
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          test-script: npm run test:coverage
+          threshold: 80
+          coverage-file: coverage/coverage-final.json
+          output: comment, report-markdown
