@@ -22,3 +22,4 @@ jobs:
           test-script: npm run test:coverage
           threshold: 80
           output: comment, report-markdown
+          custom-title: Coverage report for Server Side
