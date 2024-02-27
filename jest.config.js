@@ -1,7 +1,10 @@
 module.exports = {
   coverageThreshold: {
     global: {
-      lines: 60,
+      lines: 80,
     },
   },
+  testEnvironment: 'node',
+  testMatch: ['<rootDir>/__test__/**/*.test.js'],
+  moduleFileExtensions: ['js', 'json', 'node'],
 };
